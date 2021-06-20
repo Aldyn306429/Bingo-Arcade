@@ -1,0 +1,106 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>Bingo Arcade</title>
+        <meta charset="UTF-8">
+        <style>
+            body {
+                background-color: #001f3F;
+                font-family: Verdana;
+                color: honeydew;
+            }
+
+            .title {
+                text-align: center;
+            }
+
+            .bingo-box{
+                width: 500px;
+                height: 500px;
+                border: 5px solid #4184A4;
+                display: grid;
+                grid-template-areas:
+                "box1 box2 box3"
+                "box4 box5 box6"
+                "box7 box8 box9";
+                grid-auto-rows: 166.67px;
+                grid-auto-columns: 166.67px;
+            }
+
+            .center-box {
+                display: flex;
+                justify-content: space-evenly;
+                align-items: center;
+            }
+
+            .box {
+                background-color: #F8F2BB;
+                color: #9A92C2;
+                border: 5px solid #080808;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .text {
+                font-size: 50px;
+            }
+
+            .tile-box {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+            #box0, #box10 {
+                width: 166.67px;
+                height: 166.67px;
+                background-color: black;
+                color: honeydew;
+                display: flex;
+                text-align: center;
+            }
+
+            .start-game {
+                color: honeydew;
+                font-size: 40px;
+            }
+        </style>
+    </head>
+    <body>
+        <h1 class="title">Welcome to Bingo Arcade!</h1>
+        <div class="center-box">
+            <div class="tile-Box">
+                <div id="box0" class="box">
+
+                </div>
+            </div>
+            <div class="bingo-box">
+                <div id = "box1" class="box">
+                </div>
+                <div id = "box2" class="box">
+                </div>
+                <div id = "box3" class="box">
+                </div>
+                <div id = "box4" class="box">
+                </div>
+                <div id = "box5" class="box">
+                </div>
+                <div id = "box6" class="box">
+                </div>
+                <div id = "box7" class="box">
+                </div>
+                <div id = "box8" class="box">
+                </div>
+                <div id = "box9" class="box">
+                </div>
+            </div>
+            <div id="findGameButton">
+                <div id = "box10" class="box">
+                </div>
+            </div>
+        </div>
+    </body>
+    <script type="text/javascript" src="module.js"></script>
+    <script type="text/javascript" src="index.js"></script>
+</html>

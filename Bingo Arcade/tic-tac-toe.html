@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title> Tic-Tac-Toe </title>
+
+		<style>
+			.Square {
+				width: 120px;
+				height: 120px;
+				text-align: center;
+				font-size: 35pt;
+				font-weight: bolder;
+				font-family: Verdana;
+				background-color: white;
+			}
+
+            .button {
+              border: 4px solid black;;
+              color: black;
+              padding: 16px 32px;
+              text-align: center;
+              text-decoration: none;
+              display: inline-block;
+              font-size: 18px;
+			  font-weight: bold;
+			  font-family: Verdana;
+              margin: 4px 2px;
+              cursor: pointer;
+			  background-color: white;
+            }
+			
+			.font {
+			  font-size: 30px;
+			  font-weight: bold;
+			  font-family: Verdana;
+			}
+            .center {
+              margin-left: auto;
+              margin-right: auto;
+            }
+
+            .center2 {
+             display: flex;
+             Justify-content: center;
+            }
+
+            #center3 {
+             display: flex;
+             Justify-content: center;
+            }
+			
+			body {
+  			background-image: url('images/cow.png');
+  			background-repeat: no-repeat;
+  			background-attachment: fixed;
+  			background-size: cover;
+			
+			}
+    	</style>
+		<script type="text/javascript" src="module.js"></script>
+		<script type="text/javascript" src="tic-tac-toe.js"></script>
+	</head>
+
+	<body onload="startGame();">
+		<h1 style="text-align:center;font-size: 45px"> TIC-TAC-TOE </h1>
+	
+		<div class = "center2 font" id="message">Player gets to start.</div>
+		
+		<table border="3" class="center">
+			<tr>
+				<td id="s1" class="Square" onclick="nextMove(this);"></td>
+				<td id="s2" class="Square" onclick="nextMove(this);"></td>
+				<td id="s3" class="Square" onclick="nextMove(this);"></td>
+			</tr> 
+			<tr>
+				<td id="s4" class="Square" onclick="nextMove(this);"></td>
+				<td id="s5" class="Square" onclick="nextMove(this);"></td>
+				<td id="s6" class="Square" onclick="nextMove(this);"></td>
+			</tr>
+			<tr>
+				<td id="s7" class="Square" onclick="nextMove(this);"></td>
+				<td id="s8" class="Square" onclick="nextMove(this);"></td>
+				<td id="s9" class="Square" onclick="nextMove(this);"></td>
+			</tr>
+		</table>
+        <div id="center3">
+
+        </div>
+        </form>
+	</body>
+</html>

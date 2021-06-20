@@ -1,0 +1,238 @@
+<DOCTYPE!>
+  <html>
+    <head>
+      <script type="text/javascript" src="module.js"></script>
+      <meta charset="UTF-8">
+      <title>Rock, Paper, Scissors</title>
+      <style>
+      /* The CSS for the container that holds the display of who won, buttons, and the scoreboard*/
+        html, body {
+          margin: 0;
+        }
+
+        .container {
+          display: flex;
+          justify-content: center;
+          height: 100%; 
+          width: 100%; 
+          background: white;
+        }
+
+        body {
+          border: 10px solid black;
+        }
+
+      /* */
+      
+      /* The CSS for the the display of what object the player and the computer chose*/ 
+
+        .Selection {
+          width: 100%;
+          position: absolute;
+          bottom: 0%;
+          left: 0%; 
+          border: 3px solid black; 
+          border-style: solid hidden hidden hidden;
+          height: 35%;
+          z-index: 1;
+        }
+
+        .PlayerSelection {
+          font-family: 'Times New Roman', Times, serif;
+          font-size: 40px;
+          color: honeydew; 
+          background-color: black;
+          position: absolute; 
+          left: 0%;
+          width: 50%;
+          display: flex;
+          justify-content: center;
+          border: 3px solid white;
+          border-style: hidden solid hidden hidden;
+          padding: 10px 0px 10px 0px; 
+        }
+
+        .ComputerSelecion {
+          font-family: 'Times New Roman', Times, serif;
+          font-size: 40px;
+          color: honeydew; 
+          background-color: black;
+          position: absolute; 
+          right: 0%;
+          width: 50%;
+          display: flex;
+          justify-content: center;
+          border: 3px solid white; 
+          border-style: hidden hidden hidden solid;
+          padding: 10px 0px 10px 0px; 
+        }
+
+        .BattleAgainstIcon {
+          background-image: url(battle.png); 
+          background-size: cover;
+          height: 80px;
+          width: 80px;
+          position: absolute;
+          left: 47%;
+          top: 50%;
+        }
+
+        #PlayerObject {
+          position: absolute; 
+          bottom: 10%;
+          left: 20%;
+          height: 125px;
+          width: 125px;
+          border-radius: 50%;
+          z-index: 2;
+        }
+
+        #ComputerObject {
+          position: absolute;
+          bottom: 10%; 
+          right: 20%;
+          height: 125px;
+          width: 125px;
+          border-radius: 50%;
+          z-index: 2;
+        }
+
+      /* */
+
+      /* The CSS for the sentences that displays who won the match and rounds*/
+
+        .convo {
+          justify-content: center;
+          font-family: 'Times New Roman', Times, serif;
+          display: flex;
+          width: 90%;
+          right: 5%;
+          left: 5%;
+          font-size: 50px;
+          position: absolute;
+          top: 10%; 
+        }
+
+      /* */
+
+      /* The CSS for the buttons for Rock, Paper, Scissors, and reload*/
+
+        .ReloadButton {
+          width: 110px;
+          height: 30px;
+          font-size: 12px;
+          position: absolute;
+          top: -15%;
+          border-radius: unset;
+          border: 1px solid black;
+          background-color: #00203F;
+          color: honeydew; 
+          border-radius: 10%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+
+        span {
+          position: relative;
+          top: 60%; 
+        }
+
+        .Rock {
+          background-image: url(images/rock.png);
+          background-size: cover;
+        }
+        .Paper{
+          background-image: url(images/paper.png);
+          background-size: cover;
+        }
+        .Scissors{
+          background-image: url(images/scissors.png);
+          background-size: cover;
+        }
+
+        #hover:hover {
+          transform: scale(1.1, 1.1); 
+        }
+
+        Button {
+          margin-right: 100px; 
+          margin-left: 100px; 
+          border-radius: 50%;
+          border-style: hidden;
+          height: 125px;
+          width: 125px;
+          position: relative;
+          top: 33%;
+        }
+
+      /* */
+
+      /* The CSS for the scores of the computer and player*/
+
+        .scores {
+          position: absolute; 
+        }
+
+        .playerScore {
+          position: absolute;
+          top: 0%;
+          left: 0%;
+          border: 3px black;
+          border-style: hidden solid solid hidden;
+          font-family: 'Times New Roman', Times, serif;
+          color: honeydew;
+          background-color: black;
+          font-size: 40px;
+          padding: 0px 10px 60px 10px;
+          width: 275px;
+          display: flex;
+          justify-content: center;
+        }
+
+        .computerScore {
+          position: absolute;
+          top: 0%;
+          right: 0%;
+          border: 3px black;
+          border-style: hidden hidden solid solid;
+          font-family: 'Times New Roman', Times, serif;
+          color: honeydew; 
+          background-color: black;
+          font-size: 40px;
+          padding: 0px 10px 60px 10px; 
+          width: 275px;
+          display: flex;
+          justify-content: center;
+        }
+
+      /* */
+
+      </style>
+    </head>
+    <body>
+      <div class="playerScore">Player Score:</div>
+      <div class="computerScore">Computer Score:</div>
+      <div class="convo"></div>
+      <div class="container">
+        <button class="Rock" id="hover">
+          <span>Rock</span>
+        </button>
+        <button class="Paper" id="hover">
+          <span>Paper</span>
+        </button>
+        <button class="Scissors" id="hover">
+          <span>Scissors</span>
+        </button>
+      </div>
+      <div class="Selection">
+        <div class="PlayerSelection">PlayerSelection</div>
+        <div id="PlayerObject"></div>
+        <div class="BattleAgainstIcon"></div>
+        <div class="ComputerSelecion">Computer Selection</div>
+        <div id="ComputerObject"></div>
+      </div>
+      <script type="text/javascript" src="module.js"></script>
+      <script type="text/javascript" src="rock-paper-scissors.js"></script>
+    </body>
+  </html>
